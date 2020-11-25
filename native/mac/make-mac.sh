@@ -25,4 +25,4 @@ lipo -create "$LIB_X86_64" "$LIB_ARM64" -o "$RESULT_LIB_PATH"
 [ -f "$LIB_X86_64" ] && rm "$LIB_X86_64"
 [ -f "$LIB_ARM64" ] && rm "$LIB_ARM64"
 
-echo "Done successfully"
+echo "Done successfully, written to $RESULT_LIB_PATH"
