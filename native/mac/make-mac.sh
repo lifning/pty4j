@@ -9,7 +9,7 @@ LIB_X86_64="$THIS_DIR/libpty-x86-64.dylib"
 LIB_ARM64="$THIS_DIR/libpty-arm64.dylib"
 
 C_FLAGS="-std=c11 -O2 -Wall -Wextra -Wpedantic -Wno-newline-eof"
-CC=gcc
+CC=clang
 
 [ -f "$LIB_X86_64" ] && rm "$LIB_X86_64"
 [ -f "$LIB_ARM64" ] && rm "$LIB_ARM64"
