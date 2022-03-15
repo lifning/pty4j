@@ -21,6 +21,7 @@
 #include <sys/ioctl.h>
 #include <fcntl.h>
 #include <sys/wait.h>
+#include <termio.h>
 
 #include "exec_pty.h"
 

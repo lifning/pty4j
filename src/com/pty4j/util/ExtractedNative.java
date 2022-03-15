@@ -25,6 +25,7 @@ class ExtractedNative {
       "darwin/libpty.dylib",
       "freebsd/x86/libpty.so",
       "freebsd/x86-64/libpty.so",
+      "illumos/x86-64/libpty.so",
       "linux/x86/libpty.so",
       "linux/x86-64/libpty.so",
       "linux/aarch64/libpty.so",

@@ -57,6 +57,9 @@ public class PtyUtil {
     if (osType == Platform.MAC) {
       return "darwin";
     }
+    if (osType == Platform.SOLARIS) {
+      return "illumos/" + arch;
+    }
     if (osType == Platform.LINUX) {
       return "linux/" + arch;
     }
@@ -75,7 +78,7 @@ public class PtyUtil {
       result = "libpty.dylib";
     } else if (Platform.isWindows()) {
       result = "winpty.dll";
-    } else if (Platform.isLinux() || Platform.isFreeBSD() || Platform.isOpenBSD() || Platform.isAndroid()) {
+    } else if (Platform.isLinux() || Platform.isFreeBSD() || Platform.isOpenBSD() || Platform.isAndroid() || Platform.isSolaris()) {
       result = "libpty.so";
     } else {
       throw new IllegalStateException("Platform " + Platform.getOSType() + " is not supported");

@@ -227,6 +227,9 @@ public class PtyHelpers {
     if (Platform.isOpenBSD()) {
       return new com.pty4j.unix.openbsd.OSFacadeImpl();
     }
+    if (Platform.isSolaris()) {
+      return new com.pty4j.unix.illumos.OSFacadeImpl();
+    }
     if (Platform.isLinux() || Platform.isAndroid()) {
       return new com.pty4j.unix.linux.OSFacadeImpl();
     }
